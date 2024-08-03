@@ -28,6 +28,8 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+
         val btnSendActivity = findViewById<Button>(R.id.btnSendActivity)
 
         //Se envia extras a SecondActivity, si se desea obtener un result de la actividad se ocupa el register (register.launch(intent))

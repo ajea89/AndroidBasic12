@@ -2,6 +2,7 @@ package com.ajea.androidbasic12.ejerciciosclase.ejercicios1.explicitintent
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
@@ -15,6 +16,9 @@ class SecondActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
+
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val labeName = findViewById<TextView>(R.id.labelName)
         val btnReturn = findViewById<Button>(R.id.btnReturn)
@@ -66,5 +70,16 @@ class SecondActivity : AppCompatActivity() {
             setResult(RESULT_OK, resultIntent)
             finish()
         }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            android.R.id.home ->{
+                onBackPressedDispatcher.onBackPressed()
+//                Toast.makeText(this, "Click en back", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        return super.onOptionsItemSelected(item)
     }
 }
