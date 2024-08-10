@@ -6,6 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/animalCard"
         app:layout_constraintTop_toTopOf="parent"
         app:cardUseCompatPadding="true"
         app:cardCornerRadius="15dp"
@@ -23,7 +24,7 @@
                 android:id="@+id/ivAnimal"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@mipmap/ic_launcher"
+                android:src="@drawable/ic_people"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
