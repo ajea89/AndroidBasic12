@@ -5,11 +5,17 @@ import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.ajea.androidbasic12.R
+import com.ajea.androidbasic12.databinding.ActivityMainBinding
 
 class LifeCycleActivity : AppCompatActivity() {
+
+    private lateinit var binding : ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         Log.e("LifeCycle", "onCreate")
         Toast.makeText(this,"onCreate", Toast.LENGTH_SHORT).show()

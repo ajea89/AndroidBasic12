@@ -9,5 +9,7 @@ class CreationExample2Activity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_creation_example_2)
+
+
     }
 }

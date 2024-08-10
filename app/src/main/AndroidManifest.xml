@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -15,11 +15,8 @@
         android:theme="@style/Theme.AndroidBasic12"
         tools:targetApi="31">
         <activity
-            android:name=".ejerciciosclase.ejercicio2.componentesgraficos.list.AnimalDetailActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ejerciciosclase.ejercicio2.componentesgraficos.list.AnimalListActivity"
-            android:exported="true">
+            android:name=".ejerciciosclase.ejercicio2.fragment.params.ParamsActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,8 +24,20 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".ejerciciosclase.ejercicio2.fragment.FragmentActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".ejerciciosclase.ejercicio2.componentesgraficos.viewbinding.ViewBindingExampleActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ejerciciosclase.ejercicio2.componentesgraficos.list.AnimalDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ejerciciosclase.ejercicio2.componentesgraficos.list.AnimalListActivity"
+            android:exported="true" />
+        <activity
             android:name=".ejerciciosclase.ejercicio2.componentesgraficos.ComponentsActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".ejerciciosclase.ejercicio2.componentesgraficos.ConstraintLayoutActivity"
             android:exported="true" />
@@ -61,7 +70,7 @@
             android:exported="false" />
         <activity
             android:name=".ejerciciosclase.ejercicios1.LifeCycleActivity"
-            android:exported="false" />
+            android:exported="true"></activity>
     </application>
 
 </manifest>

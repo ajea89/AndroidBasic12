@@ -17,6 +17,7 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -32,6 +33,10 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+
+    buildFeatures {
+        viewBinding = true
     }
 }
 

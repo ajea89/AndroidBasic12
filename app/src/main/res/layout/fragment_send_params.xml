@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ejerciciosclase.ejercicio2.fragment.params.SendParamsFragment">
+
+    <EditText
+        android:id="@+id/etName"
+        android:hint="Ingresa tu nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/etAge"
+        android:inputType="numberDecimal"
+        android:hint="Ingresa tu edad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btSendParams"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send Params" />
+
+</LinearLayout>

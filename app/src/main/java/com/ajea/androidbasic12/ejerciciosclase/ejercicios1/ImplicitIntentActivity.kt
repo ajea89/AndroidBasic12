@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.ajea.androidbasic12.R
+import com.ajea.androidbasic12.databinding.ActivityImplicitIntentBinding
 
 class ImplicitIntentActivity : AppCompatActivity() {
 
