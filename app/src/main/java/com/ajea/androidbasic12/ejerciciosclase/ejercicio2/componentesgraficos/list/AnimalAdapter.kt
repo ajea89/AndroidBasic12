@@ -6,8 +6,10 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
+import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.ajea.androidbasic12.R
+import com.squareup.picasso.Picasso
 
 class AnimalAdapter(val list: List<AnimalEntity>): RecyclerView.Adapter<AnimalAdapter.AnimalViewHolder>() {
 
@@ -22,11 +24,19 @@ class AnimalAdapter(val list: List<AnimalEntity>): RecyclerView.Adapter<AnimalAd
 
         fun render(animalEntity: AnimalEntity, onItemSelected : ((AnimalEntity) -> Unit)?) {
             tvAnimal.text = animalEntity.name
-            tvColor.text = animalEntity.color
+//            tvColor.text = animalEntity.color
+            tvColor.typeface = ResourcesCompat.getFont(tvColor.context, R.font.bernier_shade_regular)
 
             animalCard.setOnClickListener {
                 onItemSelected?.invoke(animalEntity)
             }
+
+            Picasso.get()
+                .load("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM1-2B5wjpFuyYrSCslCd0do7Do5-wcCwnOQ&usqp=CAU")
+                .placeholder(R.drawable.img_android)
+                .error(R.drawable.group)
+                .into(ivAnimal)
+
         }
     }
 

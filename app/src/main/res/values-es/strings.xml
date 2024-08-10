@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AndroidBasico12</string>
+    <string name="label_continue">Continuar</string>
+    <string name="label_cancel">Calcelar</string>
+    <string name="label_close">Cerrar</string>
+</resources>

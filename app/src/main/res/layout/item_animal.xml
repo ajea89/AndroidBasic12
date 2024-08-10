@@ -24,7 +24,8 @@
                 android:id="@+id/ivAnimal"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/ic_people"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_android"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -34,6 +35,7 @@
                 android:layout_height="wrap_content"
                 android:paddingHorizontal="10dp"
                 android:maxLines="2"
+                style="@style/RedTextStyle"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ivAnimal"
@@ -41,6 +43,8 @@
 
             <TextView
                 android:id="@+id/tvColor"
+                style="@style/YellowTextStyle"
+                android:text="@string/label_close"
                 app:layout_constraintTop_toBottomOf="@+id/tvAnimal"
                 app:layout_constraintStart_toEndOf="@+id/ivAnimal"
                 android:layout_marginTop="5dp"

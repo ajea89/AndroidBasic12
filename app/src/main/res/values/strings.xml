@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">AndroidBasic12</string>
+    <string name="label_continue">Continue</string>
+    <string name="label_cancel">Cancel</string>
+    <string name="label_close">Close</string>
 </resources>
