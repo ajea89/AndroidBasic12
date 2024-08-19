@@ -17,11 +17,7 @@
         <activity
             android:name=".ejerciciosclase.ejercicio2.fragment.params.ParamsActivity"
             android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".ejerciciosclase.ejercicio2.fragment.FragmentActivity"
@@ -37,7 +33,13 @@
             android:exported="true" />
         <activity
             android:name=".ejerciciosclase.ejercicio2.componentesgraficos.ComponentsActivity"
-            android:exported="true" />
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".ejerciciosclase.ejercicio2.componentesgraficos.ConstraintLayoutActivity"
             android:exported="true" />

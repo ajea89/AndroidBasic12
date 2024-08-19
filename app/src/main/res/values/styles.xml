@@ -17,4 +17,10 @@
         <item name="android:textColor">@color/black</item>
     </style>
 
+<!--    Se crea tema para aplicarselo al RadioButton segun los atributos que queremos modificar-->
+    <style name="RadioButton" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@color/red</item>
+        <item name="colorControlNormal">@color/yellow</item>
+    </style>
+
 </resources>

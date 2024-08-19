@@ -26,12 +26,20 @@
         <RadioButton
             android:id="@+id/rbWoman"
             android:text="Mujer"
+            android:theme="@style/RadioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
         <RadioButton
             android:id="@+id/rbMan"
             android:text="Hombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <RadioButton
+            android:id="@+id/rbOther"
+            android:text="Otro"
+            app:buttonTint="@color/radio_button_color"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
