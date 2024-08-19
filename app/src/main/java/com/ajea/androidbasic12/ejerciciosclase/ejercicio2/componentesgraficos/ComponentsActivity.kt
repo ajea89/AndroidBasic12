@@ -1,6 +1,12 @@
 package com.ajea.androidbasic12.ejerciciosclase.ejercicio2.componentesgraficos
 
+import android.graphics.Color
 import android.os.Bundle
+import android.text.SpannableString
+import android.text.Spanned
+import android.text.TextPaint
+import android.text.method.LinkMovementMethod
+import android.text.style.ClickableSpan
 import android.view.View
 import android.widget.AdapterView
 import android.widget.AdapterView.OnItemSelectedListener
@@ -10,6 +16,7 @@ import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.RadioGroup
 import android.widget.Spinner
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.ajea.androidbasic12.R
@@ -24,6 +31,34 @@ class ComponentsActivity : AppCompatActivity() {
         val rgSex = findViewById<RadioGroup>(R.id.rgSex)
         val spinner = findViewById<Spinner>(R.id.spinner)
         val etName = findViewById<EditText>(R.id.etName)
+        val cbTerms= findViewById<CheckBox>(R.id.cbTerms)
+        val tvTerms= findViewById<TextView>(R.id.tvTerms)
+
+        //TERMS LINK CHECKBOX
+        val text = tvTerms.text
+        val ss = SpannableString(text)
+
+        val clickableSpan = object : ClickableSpan() {
+            override fun onClick(widget: View) {
+                //Aqui se pone lo que se requiere ahcer al detectar el click en el link
+                Toast.makeText(this@ComponentsActivity, "Click link", Toast.LENGTH_SHORT).show()
+            }
+
+            //Se cambia el diseño default del link
+            override fun updateDrawState(ds: TextPaint) {
+                super.updateDrawState(ds)
+                ds.color = Color.BLUE
+                ds.isUnderlineText = true
+            }
+        }
+        //Se define el comienzo y el final del link en la string
+        ss.setSpan(clickableSpan, 27, 47, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        tvTerms.text = ss
+        tvTerms.movementMethod = LinkMovementMethod.getInstance()
+
+        cbTerms.setOnCheckedChangeListener { compoundButton, isChecked ->
+            Toast.makeText(this, "Terms isChecked = $isChecked", Toast.LENGTH_SHORT).show()
+        }
 
         //CHECKBOX
         cbCreditCard.setOnCheckedChangeListener { compoundButton, isChecked ->
